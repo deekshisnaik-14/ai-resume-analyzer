@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Compare resume text with a job description and get improvement suggestions.">
+<title>ResumeIQ — AI Resume Analyzer</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="logo">R</span> Resume<span class="mint">IQ</span></a><span class="tag">✦ CAREER TOOLKIT</span></header>
+<main class="shell">
+<section class="hero"><p class="eyebrow">YOUR NEXT OPPORTUNITY STARTS HERE</p><h1>Make your resume<br><span>work smarter.</span></h1><p class="sub">Compare your experience with the role. Find skill gaps, uncover strengths, and get clear next steps.</p><div class="highlights"><span>01 &nbsp; Skill matching</span><span>02 &nbsp; Gap analysis</span><span>03 &nbsp; Actionable feedback</span></div></section>
+<section class="layout">
+<div class="panel"><div class="panelhead"><div><small>LET'S GET STARTED</small><h2>Analyze your fit</h2></div><span class="step">STEP 1 / 1</span></div>
+<form id="form">
+<label for="resume">Your resume text <b>*</b></label><textarea id="resume" maxlength="30000" minlength="20" required placeholder="Paste your resume text here…&#10;&#10;Include your summary, technical skills, education, and projects."></textarea><div class="meta"><span>Include projects and technical skills</span><span id="rc">0 / 30,000</span></div>
+<label for="job">Job description <b>*</b></label><textarea id="job" maxlength="20000" minlength="20" required placeholder="Paste the job description here…&#10;&#10;Include responsibilities and required qualifications."></textarea><div class="meta"><span>Use the full description when possible</span><span id="jc">0 / 20,000</span></div>
+<div class="privacy"><strong>ⓘ Your information matters.</strong> This demo does not save submissions to a database. Avoid pasting sensitive personal information.</div>
+<button id="submit" type="submit">Analyze my resume <span>↗</span></button><p class="note">Works in demo mode without an API key. Configure a server-side key for LLM-powered feedback.</p></form></div>
+<aside class="panel side"><div class="star">✦</div><h3>A clearer path<br>to your next role.</h3><p>Good applications connect your real experience to what a team needs. Start with a focused comparison.</p><hr><div class="benefit"><i>✓</i><div><b>See the overlap</b><small>Skills found in both texts</small></div></div><div class="benefit"><i>✓</i><div><b>Spot the gaps</b><small>Requirements not found in your resume</small></div></div><div class="benefit"><i>✓</i><div><b>Improve with intent</b><small>Practical, truthful suggestions</small></div></div><p class="note">Your score is an estimate—not a prediction of hiring success.</p></aside>
+</section>
+<section id="results" class="hidden"><div class="resulthead"><div><small>YOUR REPORT</small><h2>Resume analysis</h2></div><button id="reset" class="secondary">Start over ↻</button></div>
+<div class="score panel"><div class="ring" id="ring"><div><strong id="score">0</strong><small>FIT SCORE</small></div></div><div><small id="mode" class="mint">DEMO ANALYSIS</small><h3 id="scoretitle">Your report is ready</h3><p id="summary"></p></div></div>
+<div class="resultgrid"><article class="panel"><h3>🟢 Matching skills <em id="mc">0</em></h3><div id="matching" class="chips"></div></article><article class="panel"><h3>🟠 Skills to review <em id="xc">0</em></h3><div id="missing" class="chips"></div></article><article class="panel"><h3>🔵 What stands out</h3><ul id="strengths"></ul></article><article class="panel"><h3>🟣 Suggested next steps</h3><ul id="suggestions"></ul></article></div><p class="note">Only add skills, achievements, or qualifications that are true for you.</p></section>
+<footer><span>ResumeIQ · Built for thoughtful career growth</span><span>Java · Spring Boot · Web · AI API</span></footer>
+</main><script src="/app.js"></script></body></html>
